@@ -7,6 +7,16 @@
     </style>
 </head>
 <body>
-    <iframe src="https://nigerdeltaanrpm.wixsite.com/my-site-1" frameborder="0"></iframe>
+    <iframe src="https://nigerdeltaanrpm.wixsite.com/mysite1" frameborder="0"></iframe>
+    <script>
+        window.onload = function() {
+            var iframe = document.querySelector('iframe');
+            iframe.onload = function() {
+                var style = document.createElement('style');
+                style.textContent = '.upgrade-container { display: none !important; }';
+                iframe.contentDocument.head.appendChild(style);
+            };
+        };
+    </script>
 </body>
 </html>
