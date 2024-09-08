@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>My GitHub Pages Site</title>
     <style>
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
         iframe {
             width: 100%;
-            height: 80vh; / Use a fixed height that accommodates the banner /
+            height: 100%;
             border: none;
             display: block;
-            margin: 0 auto; / Center the iframe /
+            margin: 0 auto;
         }
-        @media screen and (maxwidth: 768px) {
-            iframe {
-                height: 100vh; / Make the iframe full viewport height on small screens /
-            }
+        .custombanner {
+            width: 100%;
+            height: 100%;
+            backgroundcolor: ffffff; / Set your custom banner background color /
+            display: flex;
+            justifycontent: center;
+            alignitems: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            zindex: 1; / Ensure the custom banner appears above the Wix banner /
+        }
+        .custombannercontent {
+            / Style your custom banner content here /
+            fontsize: 24px;
+            color: 333333;
+            textalign: center;
+        }
+        .linkelement {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none; / Hide the Wix banner link element /
         }
     </style>
 </head>
 <body>
-    <iframe src="https://nigerdeltaanrpm.wixsite.com/my-site-1" frameborder="0"></iframe>
+    <iframe src="https://nigerdeltaanrpm.wixsite.com/my-site-1"></iframe>
 </body>
 </html>
