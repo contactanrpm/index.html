@@ -3,7 +3,7 @@
 <head>
     <title>My GitHub Pages Site</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        body, html { margin: ; padding: ; height: ; overflow: hidden; }
         iframe {
             width: 100%;
             height: 100%;
@@ -41,5 +41,16 @@
 </head>
 <body>
     <iframe src="https://nigerdeltaanrpm.wixsite.com/my-site-1"></iframe>
+    <script>
+    window.onload = function() {
+        var iframe = document.querySelector('iframe');
+        iframe.onload = function() {
+            var linkelement = iframe.contentDocument.querySelector('a[datatestid="linkelement"]');
+            if (linkelement) {
+                linkelement.style.display = 'none';
+            }
+        };
+    };
+    </script>
 </body>
 </html>
