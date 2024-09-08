@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>My GitHub Pages Site</title>
+    <meta name="viewport" content="width=devicewidth, initialscale=1">
     <style>
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: none; }
-        .upgrade-container { display: none !important; }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+        .upgradecontainer { display: none !important; }
+        @media screen and (maxwidth: 768px) {
+            iframe {
+                width: calc(100%  32px);
+            }
+        }
     </style>
 </head>
 <body>
     <iframe src="https://nigerdeltaanrpm.wixsite.com/my-site-1" frameborder="0"></iframe>
-    <script>
-        window.onload = function() {
-            var iframe = document.querySelector('iframe');
-            iframe.onload = function() {
-                var style = document.createElement('style');
-                style.textContent = '.upgrade-container { display: none !important; }';
-                iframe.contentDocument.head.appendChild(style);
-            };
-        };
-    </script>
-    <script src="index.js"></script>
 </body>
 </html>
