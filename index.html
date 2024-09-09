@@ -3,22 +3,21 @@
 <head>
     <style>
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe {
-            width: 100%;
-            height: 80vh; / Use a fixed height that accommodates the banner /
-            border: none;
-            display: block;
-            margin: 0 auto; / Center the iframe /
-        }
-        @media screen and (maxwidth: 768px) {
-            iframe {
-                height: 100vh; / Make the iframe full viewport height on small screens /
-            }
-        }
+        iframe { width: 100%; height: 100%; border: none; }
     </style>
 </head>
 <body>
-    <iframe src="https://nigerdeltaanrpm.wixsite.com/my-site-1"></iframe>
+    <iframe src="https://nigerdeltaanrpm.wixsite.com/my-site-1" frameborder="0"></iframe>
+    <script>
+        window.onload = function() {
+            var iframe = document.querySelector('iframe');
+            iframe.onload = function() {
+                var style = document.createElement('style');
+                style.textContent = '.upgradebannerwrapper { display: none !important; }';
+                iframe.contentDocument.head.appendChild(style);
+            };
+        };
+    </script>
 </body>
 </html>
 
