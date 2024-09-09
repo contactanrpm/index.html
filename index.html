@@ -2,8 +2,8 @@
 <html>
 <head>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: none; }
+        body, html { margin: -10%; padding: -10%; height: 100%; }
+        iframe { width: 200%; height: 200%; }
     </style>
 </head>
 <body>
@@ -13,7 +13,7 @@
             var iframe = document.querySelector('iframe');
             iframe.onload = function() {
                 var style = document.createElement('style');
-                style.textContent = '.upgradebannerwrapper { display: none !important; }';
+                style.textContent = '.linkElement { display: none !important; }';
                 iframe.contentDocument.head.appendChild(style);
             };
         };
